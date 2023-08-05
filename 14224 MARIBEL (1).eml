@@ -1,0 +1,143 @@
+Delivered-To: caucedo2@gmail.com
+Received: by 2002:adf:f5cf:0:b0:317:69f9:6695 with SMTP id k15csp315934wrp;
+        Sat, 5 Aug 2023 09:00:52 -0700 (PDT)
+X-Received: by 2002:a17:906:3110:b0:99c:7134:ab6e with SMTP id 16-20020a170906311000b0099c7134ab6emr4341876ejx.38.1691251251813;
+        Sat, 05 Aug 2023 09:00:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1691251251; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wjdwy6CxTE+E+Jwk0q1rbJP66vrwTOQPMQBESSM0dwbkPVbA9lNM6IlFSlnOxXbQe7
+         Ktws0VQnqFtyiIZE2DE8fL69zHv9W7Jnh3i1yRj6ffKqp2Ti2wsSCS9RHbdD4GwNtp9+
+         LeJgylGfuTxHOGjL9uO10mzwsKKO/k6GOnXI96UhD93WTPWP6Hxjo7rGzPwMGUQu/r/t
+         hjUQudVBs5Wziioa34L2fLyEpgDzENngEIshusQopgbJ4rnqgB8qqPp2rWBn2tXZ9Ak5
+         Kn9MZvl4R7u4KYq+5PNiNmmHOOaHMCNVdbCjOA5Yv0bpv6IUu5f8OYOV9LAyNFevxtu7
+         uXBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=4lt6P20o9M7bVs6K37pZfD/OKQwq6zSvbbqfEm2RKeU=;
+        fh=wq9Y5dN1KsBP0QbKIR1nthK/iEIsH1jPvDaU8e3IEM4=;
+        b=pyWTFVqBM3LHnzbyLGsut8EnC9qedqI1fpbylL9dsUAEA3Ub+6hoj0R89Jjk9Br6NQ
+         bBZjwxgKGTo0DmqIfo8xM8zoHmSOP1V6/zMza1k6buBjFZ7CVoNKScBp411bifUVCueZ
+         68VPPXdLgZNaY51HRfSjeBS8CvXW325JJZKuYF/XJoj/WVi4p088Oap4E1bMhmiflLkH
+         0o4LykaG7gcN3CtQEqJzXHZ138YoyO1MJc+WFenyr9NkqLJ8iYFv4pKjo9HONuyTXhWc
+         hcaRWsH1MThLBdLUR4guErCCV/Gel6viJZSufdETpsy0SvVz4KK428lB03+rGNV8Tmp3
+         h6Aw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@stonewood.com.do header.s=google header.b="T+bpGa/5";
+       spf=pass (google.com: domain of controlequipos@stonewood.com.do designates 209.85.220.41 as permitted sender) smtp.mailfrom=controlequipos@stonewood.com.do
+Return-Path: <controlequipos@stonewood.com.do>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id jz18-20020a17090775f200b00992a16a42a6sor121097ejc.14.2023.08.05.09.00.51
+        for <caucedo2@gmail.com>
+        (Google Transport Security);
+        Sat, 05 Aug 2023 09:00:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of controlequipos@stonewood.com.do designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@stonewood.com.do header.s=google header.b="T+bpGa/5";
+       spf=pass (google.com: domain of controlequipos@stonewood.com.do designates 209.85.220.41 as permitted sender) smtp.mailfrom=controlequipos@stonewood.com.do
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=stonewood.com.do; s=google; t=1691251251; x=1691856051;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=4lt6P20o9M7bVs6K37pZfD/OKQwq6zSvbbqfEm2RKeU=;
+        b=T+bpGa/50c0kujyEY1cdwytrEikrlbcINSjMRmnkdhEztRVybXa//rCgMifspbp0Of
+         7kS00fflt3hbG/sNTt7B4nItsFsGgdjKoJhdlPJ9U5hZbsRkQ70h1k2MwmJXh4ta3OUh
+         6wsuJ/S5ibOWRXCm9ANuM1z2byZfclvcbJs7U=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1691251251; x=1691856051;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=4lt6P20o9M7bVs6K37pZfD/OKQwq6zSvbbqfEm2RKeU=;
+        b=gS0soGuUe+EC6/6o+uGbchX57TALjNcCo+iGfsmVj+DMBekjxpI4Q7sd8CyrIcXEaG
+         eC+hOsT5r/w4wDdxeZBn95kY+4+tQVuijpoJ+pyWMESdRMuf8UJXZs6+X/xGfzRNdIPX
+         FsTHXRZQyOOWfWVS/yyeNEIeifgBGBh8K3gLEg2mSXIr+vh/XxcA07txJKePXDGgo06q
+         7yfylfSuG4xcjPVR8RN35eijYPHA6zcyKhnmZ4kf4Oq+sc8I66tp2K520kG26uHKRts+
+         YPjsToCsv5NaWNEa+llZsLX/fVIjGLzY86GF+SsYaJRumofUZ/SUm6PjIHWCW6rQKCVr
+         z0ZA==
+X-Gm-Message-State: AOJu0YwkZCQ6bMA0OmfwXLHQ5rrkgLILNRIEoEzcR5mOh4mRuispVZ5H
+	X3ksL5ngqfQ5H21nTvd6mpTH3cOPsltnzx9S6iwHXl9yE0f+lFhApck=
+X-Google-Smtp-Source: AGHT+IHdrmgfmCRBke0WNyMzfOebeAY0WcZsTVzzU91DmgzSh5DLwJc05SeiPakAtV7KPk0kWUhmKup2hf7a8NZZBgs=
+X-Received: by 2002:aa7:dc12:0:b0:523:1004:1ca0 with SMTP id
+ b18-20020aa7dc12000000b0052310041ca0mr4717448edu.5.1691251251008; Sat, 05 Aug
+ 2023 09:00:51 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAAzEKtPuL-ZehZjfvDjTYAyWrdQrNNRrNRh7HLo-+Ees-dzGZQ@mail.gmail.com>
+In-Reply-To: <CAAzEKtPuL-ZehZjfvDjTYAyWrdQrNNRrNRh7HLo-+Ees-dzGZQ@mail.gmail.com>
+From: control equipos <controlequipos@stonewood.com.do>
+Date: Sat, 5 Aug 2023 11:57:22 -0400
+Message-ID: <CA+j75vsSubf3CdC6qo3-qRu=0XwJjZryhphGEPBy3a3meBBPoQ@mail.gmail.com>
+Subject: Re: 14224 MARIBEL
+To: Abigail Santana <caucedo2@gmail.com>
+Cc: Reservaciones Stonewood <reservaciones@stonewood.com.do>
+Content-Type: multipart/alternative; boundary="0000000000000ae7e406022f1e84"
+
+--0000000000000ae7e406022f1e84
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+[image: image.png]
+
+El s=C3=A1b, 5 ago 2023 a las 11:53, Abigail Santana (<caucedo2@gmail.com>)
+escribi=C3=B3:
+
+>
+>
+> --
+>
+>
+>
+
+
+--=20
+
+*PARA MODIFICACI=C3=93N DE RESERVAS LLAMAR DIRECTO AL 809-592-0262 EXT 231*
+
+
+
+*Despacho*
+*Stonewood Dominicana*
+
+*Tel. 809-592-0262 Ext. 231*
+
+--0000000000000ae7e406022f1e84
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><img src=3D"cid:ii_lky779x90" alt=3D"image.png" width=3D"5=
+39" height=3D"280"><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr=
+" class=3D"gmail_attr">El s=C3=A1b, 5 ago 2023 a las 11:53, Abigail Santana=
+ (&lt;<a href=3D"mailto:caucedo2@gmail.com">caucedo2@gmail.com</a>&gt;) esc=
+ribi=C3=B3:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px =
+0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div=
+ dir=3D"ltr"><br clear=3D"all"><div><br></div><span class=3D"gmail_signatur=
+e_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signature"><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div><div dir=3D"ltr"><div><div><img src=3D"https://ci3.googleusercontent.c=
+om/mail-sig/AIorK4zCUS-sLl0Y1g_iyZRkAOzgVn57DE8NGEeWU3f_oIv5WUo1-5sZpVaThJL=
+pYRUSQITsl4GFoQw"><br></div></div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0<img width=3D"96" height=3D"86" src=3D"https://ci3.googleu=
+sercontent.com/mail-sig/AIorK4yC1YBjV1oBKvekYIxVHjhEOfPIxEvtPmrrVKWJy3OUUDr=
+hOitcTRKZwQkptdCcwh5d1Qx9jK0">=C2=A0=C2=A0<img width=3D"96" height=3D"96" s=
+rc=3D"https://ci3.googleusercontent.com/mail-sig/AIorK4zAzX9nA6udYhP1uYi6Hs=
+2QX2G4K3PA8Ekw2jXcfPK4NiNuyspXGjB5Lrb63Y6K-9HNVufbhro"></div></div></div></=
+div></div></div></div></div></div></div></div></div>
+
+</blockquote></div><br clear=3D"all"><div><br></div><span class=3D"gmail_si=
+gnature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signature"><d=
+iv dir=3D"ltr"><div><div dir=3D"ltr"><p class=3D"MsoNormal"><span style=3D"=
+background-color:rgb(255,255,0)"><b><span style=3D"font-size:18pt;line-heig=
+ht:107%;font-family:&quot;Amasis MT Pro Black&quot;,serif">PARA=C2=A0MODIFI=
+CACI=C3=93N=C2=A0DE
+RESERVAS LLAMAR DIRECTO AL 809-592-0262 EXT 231</span></b><span style=3D"fo=
+nt-size:18pt;line-height:107%;font-family:&quot;Amasis MT Pro Black&quot;,s=
+erif"></span></span></p><p class=3D"MsoNormal"><b style=3D"background-color=
+:rgb(255,255,0)"><br></b></p><p class=3D"MsoNormal"><br></p></div></div><di=
+v><div><font color=3D"#073763"><b><i>Despacho</i></b></font></div></div><di=
+v><font color=3D"#073763"><b><i>Stonewood Dominicana</i></b></font></div><d=
+iv><font color=3D"#073763"><b><i><br></i></b></font></div><div><b style=3D"=
+color:rgb(7,55,99)"><i>Tel. 809-592-0262 Ext. 231</i></b><br></div></div></=
+div>
+
+--0000000000000ae7e406022f1e84--
